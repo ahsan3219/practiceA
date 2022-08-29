@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    
+    
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit="doCheck(); return false">
+    <input placeholder="Temperature" type="text" id="temp">
+    <input placeholder="Minimum" type="text" id="min">
+    <input placeholder="Maximum" type="text" id="max">
+    <input placeholder="Time = early / late / mid" type="text" id="time">
+</form>
+<button onsubmit="doCheck(); return false">Submit</button>
+<h1 id="r"></h1>
+
+
+
+    <script>
+
+        let temp=28;
+        let min=24;
+        let max=35;
+
+        
+        let time="early"; //late//mid
+        
+        function doCheck(){
+     let temp=document.querySelector("#temp").value
+     let min=document.querySelector("#min").value
+     let max=document.querySelector("#max").value
+     let time=document.querySelector("#time").value
+     
+     
+document.querySelector("#r").innerHTML="Result"
+        if(temp<12 || (min<12 && time==="early")){
+            document.querySelector("#r").innerHTML="Do not go.Keep yourselve at home"
+        }
+else if (temp>35 && time==="early"){}
+document.querySelector("#r").innerHTML="Do not go.Keep yourselve at home"
+     
+    }
+    
+// else {  
+//              document.querySelector("#r").innerHTML="You can go out."
+//      }
+    </script>
+</body>
+</html>
